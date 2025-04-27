@@ -1,0 +1,211 @@
+html {
+    font-size: 16px;
+    background-color: #F5F5F5;
+    height: 100%;
+}
+body {
+    margin: 0;
+    height: 100%;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* CONTAINERS */
+
+.container{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    max-width: 57rem;
+    min-height: 100%;
+    padding: 1rem;
+    background-color: white;
+}
+
+
+.navbar {
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 3rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #DFDFDF;
+}
+.log-entry-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 95%;
+    margin-top: 0;
+    padding-bottom: 3rem;
+    margin-bottom: 3rem;
+    gap: 1rem;
+    border-bottom: 2px solid #DFDFDF;
+}
+.star-rating-container {
+    display: flex;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+/* FONTS */
+
+h1, h2, h3 {
+    font-family: 'Cormorant Garamond', serif;
+    margin: 0;
+    padding: 0;
+}
+h1 { font-size: 4rem; }
+h2 { font-size: 3rem; }
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.header-text {
+    font-family: 'Proza Libre', sans-serif;
+    font-size: 1.5rem;
+}
+.entry-text {
+    font-family: 'Proza Libre', sans-serif;
+    font-size: 1rem;
+}
+
+/* IMAGES */
+#bookshelf-img { width: 100%; }
+
+.nav-button {
+    flex: 1;
+    max-width: 13rem;
+    transition: transform 0.1s ease-in-out
+}
+.nav-button:hover { transform: scale(1.04); }
+
+.book-preview-img {
+    max-width: 13rem;
+    float: left;
+    margin-bottom: 1rem;
+}
+.star-icon { height: 1rem; }
+
+.ed-icon {
+    height: 1.2rem;
+    padding-left: 0.8rem;
+    float: right;
+    transition: transform 0.1s ease-in-out
+}
+.ed-icon:hover { transform: scale(1.07); }
+
+
+/* FORMS & INPUTS */
+
+#sorting-dropdown {
+    width: 6.5rem;
+    padding: 0.5rem 0.5rem;
+    margin-left: 0.5rem;
+    margin-bottom: 4rem;
+}
+.form-wrapper {
+    display: grid;
+    font-family: 'Proza Libre', sans-serif;
+    font-size: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 6rem;
+}
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr;
+    padding-bottom: 1.5rem;
+}
+.form-field {
+    width: 100%;
+    padding: 0.5rem 0.5rem; 
+}
+.form-button {
+    min-width: 7rem;
+    padding: 0.5rem;
+    margin-top: 1rem;
+}
+.label {
+    display: grid;
+    justify-items: start;
+}
+.review-input {
+    min-width: 100%;
+    min-height: 10rem;
+    max-width: 43rem;
+    padding: 0.5rem 0.5rem;
+    text-align: left;
+    white-space: pre-line;
+}
+.newentry-button-row {
+    display: grid;
+    grid-template-columns: 1fr 1.0fr 0.1fr 1.9fr 2fr;
+}
+.note-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* LISTS */
+
+ul {
+    list-style-type: square;
+}
+li::marker {
+    font-size: 2rem;
+}
+
+.read-more-button {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    padding: 0;
+    font-size: 0.9rem;
+    text-decoration: underline;
+    transition: transform 0.1s ease-in-out;
+  }
+  
+  .logout-button {
+    background-color: transparent;
+    border: 2px solid #333;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .logout-button:hover {
+    background-color: #333;
+    color: white;
+  }
+
+  
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1024px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 10px;
+    }
+}

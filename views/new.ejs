@@ -1,0 +1,93 @@
+<%- include('partials/headerB.ejs') %>
+
+<div class="container">
+    <div>
+        <img src="assets/bookshelf.png" id="bookshelf-img" alt="image of books on a shelf">
+        <h1>New Logbook Entry</h1>
+    </div>
+
+    <div class="form-wrapper">
+        <div class="form-row">
+            <div class="label">
+                <label for="book-search">Search for a book:</label>
+            </div>
+            <div>
+                <input type="search" class="form-field" id="book-search" placeholder="Enter a book name, author or ISBN"
+                autocomplete="off" />
+                <button hidden>Search</button>
+            </div>
+        </div>
+        <form autocomplete="off" action="/new-entry/add" method="post">
+            <div class="form-row">
+                <div class="label">
+                    <label for="isbn">ISBN: </label>
+                </div>
+                <div>
+                    <input type="text" name="isbn" class="form-field" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="label">
+                    <label for="title">Title: </label>
+                </div>
+                <div>
+                    <input type="text" name="title" class="form-field" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="label">
+                    <label for="author">Author: </label>
+                </div>
+                <div>
+                    <input type="text" name="author" class="form-field" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="label">
+                    <label for="description">Description: </label>
+                </div>
+                <div>
+                    <textarea type="text" name="description" class="form-field review-input" required></textarea>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="label">
+                    <label for="review">Review: </label>
+                </div>
+                <div>
+                    <textarea name="review" class="form-field review-input" required></textarea>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="label">
+                    <label for="rating">Rating: </label>
+                </div>
+                <div>
+                    <select name="rating" class="form-field" required>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+            </div>
+            <div class="newentry-button-row">
+                <div>
+                </div>
+                <div>
+                    <button type="submit" class="form-button">Send</button>
+                </div>
+                <div>
+                </div>
+                <div>
+                    <button type="button" class="form-button" onclick="window.location.href='/'">Cancel</button>
+                </div>
+                <div>
+                </div>
+        </form>
+    </div>
+
+</div>
+
+<script src="js/XMLHttpRequest.js"></script> 
